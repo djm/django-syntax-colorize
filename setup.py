@@ -16,7 +16,7 @@ setup(
         url='https://github.com/lethain/django-syntax-colorize',
         packages=find_packages(),
         include_package_data=True,
-        install_requires=['pygments'],
+        install_requires=['pygments', 'lxml'],
         classifiers=[
             'Environment :: Web Environment',
             'Intended Audience :: Developers',
