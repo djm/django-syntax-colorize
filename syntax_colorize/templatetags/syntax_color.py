@@ -33,6 +33,12 @@ def colorize(value, arg=None):
 @register.filter(name='colorize_pre')
 @stringfilter
 def colorize_pre(value, arg=None):
+    """
+    Given a chunk of rendered html/text, will find all 
+    `<pre>` tags and render them with the html formatter.
+    The lexer used will be based on the lang attrib
+    given to the `<pre>` tag. e.g `<pre lang="python">`
+    """
     try:
         html_node = html.fragment_fromstring(value, create_parent='div')
         new_html_node = html_node
